@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <script data-gaia-hoist>/* this page is a copy hoisted to GitHub Pages: live routes read snapshots */
-(function(){var M={"/amoeba": "snap/amoeba.json", "/pulse": "snap/pulse.json", "/senses": "snap/senses.json"},B=location.pathname.replace(/[^\/]*$/,""),f=window.fetch,O=[location.origin].concat(["https://primals.eco", "http://primals.eco", "//primals.eco", "https://www.primals.eco", "https://nestgate.io", "https://hud.primals.eco"]);
+(function(){var M={"/amoeba": "snap/amoeba.json", "/pulse": "snap/pulse.json", "/senses": "snap/senses.json"},B=location.pathname.replace(/[^\/]*$/,""),f=window.fetch,O=[location.origin].concat(["https://primals.eco", "http://primals.eco", "//primals.eco", "https://www.primals.eco", "https://nestgate.io", "https://hud.primals.eco"]),SITES=["/hud/", "/nestgate.io/"];
 for(var u=0;u<1;u++)B=B.replace(/[^\/]+\/$/,"");
 function R(p){if(typeof p!=="string"||p.charAt(0)!=="/"||p.charAt(1)==="/")return p;if(B!=="/"&&p.indexOf(B)===0)return p;return B+p.slice(1)}
 function S(u){for(var i=0;i<O.length;i++)if(u.indexOf(O[i]+"/")===0){u=u.slice(O[i].length);break}
@@ -11,12 +11,21 @@ window.fetch=function(u,o){try{if(typeof u==="string")return f.call(window,S(u),
 try{var xo=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(m,u){if(typeof u==="string")arguments[1]=S(u);return xo.apply(this,arguments)}}catch(e){}
 function P(c,k){try{var p=c.prototype,d=Object.getOwnPropertyDescriptor(p,k);if(d&&d.set)Object.defineProperty(p,k,{get:d.get,set:function(v){d.set.call(this,R(v))},configurable:true,enumerable:d.enumerable})}catch(e){}}
 P(HTMLScriptElement,"src");P(HTMLImageElement,"src");P(HTMLLinkElement,"href");P(HTMLIFrameElement,"src");P(HTMLMediaElement,"src");P(HTMLSourceElement,"src");
-try{var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(k,v){if((k==="src"||k==="href"||k==="poster")&&this.tagName!=="A")v=R(v);return sa.call(this,k,v)}}catch(e){}
-document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="/"]'):null;
-if(a){var h=a.getAttribute("href");if(h.charAt(1)!=="/")a.setAttribute("href",R(h))}},true);
-try{new MutationObserver(function(ms){for(var i=0;i<ms.length;i++)for(var j=0;j<ms[i].addedNodes.length;j++){var n=ms[i].addedNodes[j];if(n.nodeType!==1)continue;
+var sa=Element.prototype.setAttribute;
+try{Element.prototype.setAttribute=function(k,v){if((k==="src"||k==="href"||k==="poster")&&this.tagName!=="A")v=R(v);return sa.call(this,k,v)}}catch(e){}
+/* a link stays inside this site whether it is written from the root or with this origin in full (a page that
+   builds its links from location.host would otherwise land beside the site); a link to a live route opens its snapshot */
+function A(a){try{var h=a.getAttribute("href");if(!h)return;var o=location.origin,p=null;
+if(h.charAt(0)==="/"&&h.charAt(1)!=="/")p=h;else if(h.indexOf(o+"/")===0)p=h.slice(o.length);else if(h===o)p="/";
+if(p===null)return;if(p+"/"===B)p=B;for(var i=0;i<SITES.length;i++)if(SITES[i]!==B&&p.indexOf(SITES[i])===0)return;
+var q=p.search(/[?#]/),k=q<0?p:p.slice(0,q),n=M[k]?B+M[k]:R(p);if(n!==h)sa.call(a,"href",n)}catch(e){}}
+function AA(n){if(!n||n.nodeType!==1)return;if(n.tagName==="A")A(n);if(n.querySelectorAll){var l=n.querySelectorAll("a[href]");for(var i=0;i<l.length;i++)A(l[i])}}
+document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;if(a)A(a)},true);
+document.addEventListener("DOMContentLoaded",function(){AA(document.documentElement)});
+try{new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){if(ms[i].type==="attributes"){if(ms[i].target.tagName==="A")A(ms[i].target);continue}
+for(var j=0;j<ms[i].addedNodes.length;j++){var n=ms[i].addedNodes[j];if(n.nodeType!==1)continue;AA(n);
 var l=n.matches&&n.matches('img[src^="/"]')?[n]:[];if(n.querySelectorAll)l=l.concat([].slice.call(n.querySelectorAll('img[src^="/"]')));
-for(var k=0;k<l.length;k++){var s=l[k].getAttribute("src");if(s.charAt(1)!=="/"&&R(s)!==s)l[k].src=s}}}).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
+for(var k=0;k<l.length;k++){var s=l[k].getAttribute("src");if(s.charAt(1)!=="/"&&R(s)!==s)l[k].src=s}}}}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:["href"]})}catch(e){}
 if(false)document.addEventListener("DOMContentLoaded",function(){f.call(window,B+"snap/meta.json?t="+Date.now()).then(function(r){return r.json()}).then(function(m){
 var d=document.createElement("div");d.textContent="snapshot \u00b7 "+m.by+" \u00b7 "+m.ts.replace("T"," ").slice(0,16)+" UTC \u00b7 the live gate is at home";
 d.style.cssText="position:fixed;right:8px;bottom:6px;z-index:99999;font:11px monospace;color:#ccc;background:rgba(0,0,0,.55);padding:2px 7px;border-radius:3px;pointer-events:none";
