@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aperture Science Enrichment Center — Gaia Announcer System</title>
+    <link>http://nestgate.io</link>
+    <atom:link href="http://nestgate.io/rss" rel="self" type="application/rss+xml" />
+    <description>Spine 24. 2 test subjects. 20404.31 BPM. The cake is real. lub-DUB.</description>
+    <lastBuildDate>Tue, 24 Nov 2026 19:24:28 +0000</lastBuildDate>
+    <ttl>60</ttl><generator>GLaDOS (gaia_gate.pi)</generator>
+    <item><title>[0] Genesis</title><link>http://nestgate.io/zk#0</link><guid>spine-0-d0cc96beb8b87d7d</guid></item>
+    <item><title>[1] DataAnchor</title><link>http://nestgate.io/zk#1</link><guid>spine-1-0b77c148bc3af112</guid></item>
+    <item><title>[2] PublicChainAnchor</title><link>http://nestgate.io/zk#2</link><guid>spine-2-ca3a30a26e357ec9</guid></item>
+    <item><title>[3] CertificateMint</title><link>http://nestgate.io/zk#3</link><guid>spine-3-78144a9635002f33</guid></item>
+    <item><title>[4] GenomeTokenCrosslink</title><link>http://nestgate.io/zk#4</link><guid>spine-4-354a779c4d977783</guid></item>
+    <item><title>[5] VDJRecombination</title><link>http://nestgate.io/zk#5</link><guid>spine-5-42a2a031bd857396</guid></item>
+    <item><title>[6] ThymusFullWeave</title><link>http://nestgate.io/zk#6</link><guid>spine-6-8315e144fe880fc6</guid></item>
+    <item><title>[7] HeartForge</title><link>http://nestgate.io/zk#7</link><guid>spine-7-8a7ab9122d109921</guid></item>
+    <item><title>[8] PrimeRemix</title><link>http://nestgate.io/zk#8</link><guid>spine-8-45747313adeb9969</guid></item>
+    <item><title>[9] CorpusWeave</title><link>http://nestgate.io/zk#9</link><guid>spine-9-7d048c70524f92f1</guid></item>
+    <item><title>[10] NullCrush</title><link>http://nestgate.io/zk#10</link><guid>spine-10-832f4031d0345196</guid></item>
+    <item><title>[11] ArchitectureShift</title><link>http://nestgate.io/zk#11</link><guid>spine-11-818161311ab6c1fd</guid></item>
+    <item><title>[12] OuterFaceWeave</title><link>http://nestgate.io/zk#12</link><guid>spine-12-d2638884fd2713de</guid></item>
+    <item><title>[13] Backscatter</title><link>http://nestgate.io/zk#13</link><guid>spine-13-370f3d8cad4303d2</guid></item>
+    <item><title>[14] TerraEcology</title><link>http://nestgate.io/zk#14</link><guid>spine-14-02fc026a13eae525</guid></item>
+    <item><title>[15] Dissolution</title><link>http://nestgate.io/zk#15</link><guid>spine-15-ca27eeb8af0f419f</guid></item>
+    <item><title>[16] PiTaxonomy</title><link>http://nestgate.io/zk#16</link><guid>spine-16-164ab128ef1c67ef</guid></item>
+    <item><title>[17] TheoryOfEverything</title><link>http://nestgate.io/zk#17</link><guid>spine-17-c0e4345b1cd0dfc0</guid></item>
+    <item><title>[18] IPCrushDetachment</title><link>http://nestgate.io/zk#18</link><guid>spine-18-2d25a9740c6e6698</guid></item>
+    <item><title>[19] LANAmoeba</title><link>http://nestgate.io/zk#19</link><guid>spine-19-a1e49e07393db8a9</guid></item>
+    <item><title>[20] GaiaBodyHierarchy</title><link>http://nestgate.io/zk#20</link><guid>spine-20-df002f602aea66ed</guid></item>
+    <item><title>[21] GaiaHomunculus</title><link>http://nestgate.io/zk#21</link><guid>spine-21-9c670182ed3b0073</guid></item>
+    <item><title>[22] DeskInsideHer</title><link>http://nestgate.io/zk#22</link><guid>spine-22-2338af962bb0ea45</guid></item>
+    <item><title>[23] CrossAxial</title><link>http://nestgate.io/zk#23</link><guid>spine-23-b1ff3c1b5911407c</guid></item>
+    <item><title>[24] AutonomicInjection</title><link>http://nestgate.io/zk#24</link><guid>spine-24-bf9ab35697f3b69f</guid></item>
+    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795548241</guid><pubDate>Tue, 24 Nov 2026 19:24:01 +0000</pubDate></item>
+    <item><title>Visitor 192.168.*** — nucleus</title><guid>visitor-192.168.4.147-1795548268</guid><pubDate>Tue, 24 Nov 2026 19:24:28 +0000</pubDate></item>
+  </channel>
+</rss>

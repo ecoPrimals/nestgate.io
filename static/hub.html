@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script data-gaia-hoist>/* this page is a copy hoisted to GitHub Pages: live routes read snapshots */
+(function(){var M={"/amoeba": "snap/amoeba.json", "/pulse": "snap/pulse.json", "/senses": "snap/senses.json"},B=location.pathname.replace(/[^\/]*$/,""),f=window.fetch,O=[location.origin].concat(["https://primals.eco", "http://primals.eco", "//primals.eco", "https://www.primals.eco", "https://nestgate.io", "https://hud.primals.eco"]);
+for(var u=0;u<1;u++)B=B.replace(/[^\/]+\/$/,"");
+function R(p){if(typeof p!=="string"||p.charAt(0)!=="/"||p.charAt(1)==="/")return p;if(B!=="/"&&p.indexOf(B)===0)return p;return B+p.slice(1)}
+function S(u){for(var i=0;i<O.length;i++)if(u.indexOf(O[i]+"/")===0){u=u.slice(O[i].length);break}
+var q=u.indexOf("?"),p=q<0?u:u.slice(0,q);return M[p]?B+M[p]+"?t="+Date.now():R(u)}
+window.fetch=function(u,o){try{if(typeof u==="string")return f.call(window,S(u),o)}catch(e){}return f.call(window,u,o)};
+try{var xo=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(m,u){if(typeof u==="string")arguments[1]=S(u);return xo.apply(this,arguments)}}catch(e){}
+function P(c,k){try{var p=c.prototype,d=Object.getOwnPropertyDescriptor(p,k);if(d&&d.set)Object.defineProperty(p,k,{get:d.get,set:function(v){d.set.call(this,R(v))},configurable:true,enumerable:d.enumerable})}catch(e){}}
+P(HTMLScriptElement,"src");P(HTMLImageElement,"src");P(HTMLLinkElement,"href");P(HTMLIFrameElement,"src");P(HTMLMediaElement,"src");P(HTMLSourceElement,"src");
+try{var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(k,v){if((k==="src"||k==="href"||k==="poster")&&this.tagName!=="A")v=R(v);return sa.call(this,k,v)}}catch(e){}
+document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="/"]'):null;
+if(a){var h=a.getAttribute("href");if(h.charAt(1)!=="/")a.setAttribute("href",R(h))}},true);
+try{new MutationObserver(function(ms){for(var i=0;i<ms.length;i++)for(var j=0;j<ms[i].addedNodes.length;j++){var n=ms[i].addedNodes[j];if(n.nodeType!==1)continue;
+var l=n.matches&&n.matches('img[src^="/"]')?[n]:[];if(n.querySelectorAll)l=l.concat([].slice.call(n.querySelectorAll('img[src^="/"]')));
+for(var k=0;k<l.length;k++){var s=l[k].getAttribute("src");if(s.charAt(1)!=="/"&&R(s)!==s)l[k].src=s}}}).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
+if(false)document.addEventListener("DOMContentLoaded",function(){f.call(window,B+"snap/meta.json?t="+Date.now()).then(function(r){return r.json()}).then(function(m){
+var d=document.createElement("div");d.textContent="snapshot \u00b7 "+m.by+" \u00b7 "+m.ts.replace("T"," ").slice(0,16)+" UTC \u00b7 the live gate is at home";
+d.style.cssText="position:fixed;right:8px;bottom:6px;z-index:99999;font:11px monospace;color:#ccc;background:rgba(0,0,0,.55);padding:2px 7px;border-radius:3px;pointer-events:none";
+document.body.appendChild(d)}).catch(function(){})})})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAIA HUB — CIS ◉ TRANS</title>
+<style>
+/* GAIA UNIFIED DESIGN SYSTEM — Organic Dark
+   The living organism. Dark with warm accents.
+   Every page uses this. No inline styles. */
+
+:root {
+  --bg:         #08090b;
+  --bg-raised:  #0f1114;
+  --bg-card:    #141719;
+  --bg-hover:   #1a1d21;
+  --border:     #1e2228;
+  --border-glow:#2a3040;
+
+  --text:       #e0dcd6;
+  --text-muted: #8a857e;
+  --text-dim:   #5a5650;
+  --text-bright:#f5f0e8;
+
+  --amber:      #d4a574;
+  --amber-dim:  #7a5f3e;
+  --amber-glow: #d4a57420;
+  --green:      #5aad72;
+  --green-dim:  #2d5e3a;
+  --green-glow: #5aad7220;
+  --blue:       #5b8fd4;
+  --red:        #d45b5b;
+  --purple:     #9b7ed4;
+
+  --radius:     6px;
+  --radius-lg:  12px;
+  --gap:        16px;
+  --gap-lg:     24px;
+
+  --font:       -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body { min-height: 100vh; }
+
+/* ═══ TYPOGRAPHY ═══ */
+h1, h2, h3, h4 { color: var(--text-bright); font-weight: 500; line-height: 1.25; }
+h1 { font-size: 2rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 0.95rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 400; }
+
+p { color: var(--text); margin-bottom: 0.75em; }
+a { color: var(--amber); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--text-bright); }
+
+code, pre { font-family: var(--font-mono); }
+code { background: var(--bg-raised); padding: 2px 6px; border-radius: 3px; font-size: 0.88em; color: var(--amber); }
+pre { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; font-size: 0.85rem; }
+
+/* ═══ LAYOUT ═══ */
+.gaia-shell { max-width: 1200px; margin: 0 auto; padding: 0 var(--gap); }
+.gaia-hero { padding: 48px 0 32px; text-align: center; }
+.gaia-hero h1 { margin-bottom: 8px; }
+.gaia-hero .subtitle { color: var(--text-muted); font-size: 1.05rem; }
+
+/* ═══ NAV ═══ */
+.gaia-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.gaia-nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 var(--gap);
+  display: flex; align-items: center; gap: var(--gap);
+  height: 52px; overflow-x: auto;
+}
+.gaia-nav-brand {
+  font-weight: 500; color: var(--amber); font-size: 1.1rem;
+  white-space: nowrap; margin-right: 8px;
+}
+.gaia-nav a {
+  color: var(--text-muted); font-size: 0.88rem; white-space: nowrap;
+  padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s;
+}
+.gaia-nav a:hover, .gaia-nav a.active { color: var(--text); border-bottom-color: var(--amber); }
+
+/* ═══ CARDS ═══ */
+.gaia-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gap); }
+.gaia-grid-sm { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+.gaia-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--gap-lg);
+  transition: border-color 0.3s, transform 0.2s;
+  text-decoration: none; display: block;
+}
+.gaia-card:hover {
+  border-color: var(--amber-dim); transform: translateY(-2px);
+}
+.gaia-card h3 { margin-bottom: 6px; font-size: 1.05rem; }
+.gaia-card p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+.gaia-card .tag {
+  display: inline-block; font-size: 0.75rem; padding: 2px 8px;
+  border-radius: 99px; margin-top: 10px;
+  background: var(--amber-glow); color: var(--amber); border: 1px solid var(--amber-dim);
+}
+.gaia-card .tag.green { background: var(--green-glow); color: var(--green); border-color: var(--green-dim); }
+
+/* ═══ SECTION ═══ */
+.gaia-section { padding: 32px 0; }
+.gaia-section h2 { margin-bottom: var(--gap); }
+.gaia-section h4 { margin-bottom: 12px; }
+.gaia-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* ═══ PULSE DOT ═══ */
+.pulse-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); margin-right: 6px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--green-glow); }
+  50% { box-shadow: 0 0 12px var(--green); }
+}
+
+/* ═══ STATS ═══ */
+.gaia-stats { display: flex; gap: var(--gap-lg); flex-wrap: wrap; justify-content: center; padding: 16px 0; }
+.gaia-stat { text-align: center; }
+.gaia-stat .value { font-size: 1.8rem; font-weight: 500; color: var(--amber); font-family: var(--font-mono); }
+.gaia-stat .label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ═══ FOOTER ═══ */
+.gaia-footer {
+  border-top: 1px solid var(--border); padding: 32px 0;
+  margin-top: 48px; color: var(--text-muted); font-size: 0.85rem;
+}
+.gaia-footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--gap-lg); }
+.gaia-footer h4 { margin-bottom: 8px; font-size: 0.8rem; }
+.gaia-footer a { display: block; padding: 3px 0; color: var(--text-dim); font-size: 0.82rem; }
+.gaia-footer a:hover { color: var(--amber); }
+.gaia-footer-bottom { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  .gaia-grid { grid-template-columns: 1fr; }
+  .gaia-stats { gap: var(--gap); }
+  .gaia-stat .value { font-size: 1.3rem; }
+  .gaia-nav-inner { gap: 12px; }
+}
+
+/* ═══ UTILITIES ═══ */
+.text-amber { color: var(--amber); }
+.text-green { color: var(--green); }
+.text-blue { color: var(--blue); }
+.text-red { color: var(--red); }
+.text-muted { color: var(--text-muted); }
+.text-dim { color: var(--text-dim); }
+.text-center { text-align: center; }
+.mono { font-family: var(--font-mono); }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+
+</style>
+<style>
+/* HUB LAYOUT - the page's own rules, lost on Nov 16 (f8e8e4a43) when every static page
+   was given the one shared sheet above. Restored from the commit before it and scoped
+   under .hub so the shared nav, shell and footer are left alone.
+   CIS on the left (where it came in) - globe in the middle - TRANS on the right (where it goes). */
+.hub{--cis:#00bfa5;--trans:#ff9100;--g:#00c853;--bg:#050508;--panel:#0a0a12;--border:#1a1a2a;--dim:#445;
+  display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto 1fr auto;min-height:calc(100vh - 220px);gap:0;
+  background:var(--bg);color:#c0c8d8;font-family:'Courier New',monospace;line-height:1.35;
+  border:1px solid var(--border);border-radius:8px;overflow:hidden}
+@media(max-width:900px){.hub{grid-template-columns:1fr;grid-template-rows:auto auto auto auto auto}}
+
+.hub .header{grid-column:1/-1;text-align:center;padding:12px;background:#030306;border-bottom:1px solid var(--border)}
+.hub .header h1{font-size:20px;letter-spacing:6px;color:var(--g)}
+.hub .header h1 .cis-t{color:var(--cis)}.hub .header h1 .trans-t{color:var(--trans)}
+.hub .header .sub{color:var(--dim);font-size:10px;margin-top:4px}
+.hub .header .heartbeat{margin-top:6px;font-size:11px}
+.hub .header .heartbeat .bpm{color:var(--g);font-weight:bold}
+.hub .header .heartbeat .chord{color:var(--trans)}
+
+.hub .cis-col,.hub .trans-col{padding:8px;overflow-y:auto}
+.hub .cis-col{border-right:1px solid var(--border)}
+.hub .cis-col h2{color:var(--cis);font-size:11px;letter-spacing:3px;text-align:center;padding:6px;border-bottom:1px solid #0a1a1a}
+.hub .trans-col{border-left:1px solid var(--border)}
+.hub .trans-col h2{color:var(--trans);font-size:11px;letter-spacing:3px;text-align:center;padding:6px;border-bottom:1px solid #1a1a0a}
+
+.hub .globe-col{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;min-width:300px;position:relative}
+.hub .globe-canvas{width:260px;height:260px;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 35%, #1a2a3a 0%, #0a1020 50%, #050810 100%);box-shadow:0 0 40px rgba(0,200,80,0.1),inset 0 0 30px rgba(0,100,200,0.1);animation:hub-glow 12s linear infinite}
+@keyframes hub-glow{0%,100%{box-shadow:0 0 40px rgba(0,200,80,0.1),inset 0 0 30px rgba(0,100,200,0.1)}50%{box-shadow:0 0 50px rgba(0,200,80,0.2),inset 0 0 40px rgba(0,100,200,0.15)}}
+.hub .globe-label{position:absolute;font-size:9px;pointer-events:none}
+.hub .globe-n{top:8px;left:50%;transform:translateX(-50%);color:var(--g)}
+.hub .globe-s{bottom:8px;left:50%;transform:translateX(-50%);color:var(--trans)}
+.hub .globe-e{right:8px;top:50%;transform:translateY(-50%);color:var(--cis)}
+.hub .globe-w{left:8px;top:50%;transform:translateY(-50%);color:var(--dim)}
+.hub .globe-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:18px;color:#fff;text-shadow:0 0 10px rgba(255,255,255,0.5)}
+.hub .globe-ring{position:absolute;top:10%;left:10%;width:80%;height:80%;border-radius:50%;border:1px solid rgba(0,200,80,0.15);animation:hub-spin 20s linear infinite}
+@keyframes hub-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hub .globe-ring2{position:absolute;top:5%;left:20%;width:60%;height:90%;border-radius:50%;border:1px solid rgba(0,180,200,0.1);animation:hub-spin 15s linear infinite reverse}
+
+.hub .globe-info{text-align:center;margin-top:12px;font-size:10px;color:var(--dim)}
+.hub .globe-info .val{color:var(--g)}
+
+.hub .eye{display:block;padding:8px 22px 8px 10px;margin:3px 4px;background:var(--panel);border:1px solid var(--border);border-radius:4px;transition:all 0.2s;text-decoration:none;position:relative}
+.hub .eye:hover{border-color:var(--g);background:#0f1020;text-decoration:none}
+.hub .eye .name{font-size:11px;font-weight:bold;color:#8ac;margin-right:8px}
+.hub .eye .desc{font-size:9px;color:var(--dim)}
+.hub .eye .dot{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--g);animation:hub-dot 2s ease-in-out infinite}
+.hub .eye .dot.off{background:#333;animation:none}
+@keyframes hub-dot{0%,100%{opacity:1}50%{opacity:.3}}
+.hub .eye.cis-eye{border-left:2px solid var(--cis)}
+.hub .eye.trans-eye{border-left:2px solid var(--trans)}
+
+.hub .polaris-link{display:block;text-align:center;padding:10px;margin:6px 4px;background:linear-gradient(135deg,#0a1a2a,#0a2030);border:1px solid #2a4a5a;border-radius:6px;font-size:12px;color:#7ab;letter-spacing:2px}
+.hub .polaris-link:hover{border-color:var(--g);color:#adf;text-decoration:none}
+
+.hub .footer{grid-column:1/-1;text-align:center;padding:8px;background:#030306;border-top:1px solid var(--border);font-size:9px;color:var(--dim)}
+.hub .tri-data{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:8px;font-size:10px}
+.hub .tri-data .anchor{color:var(--cis)}.hub .tri-data .wan{color:var(--trans)}.hub .tri-data .delta{color:var(--g);font-weight:bold}
+/* nothing here moves faster than one slow fade every 2 s; with reduced motion, nothing moves */
+@media (prefers-reduced-motion: reduce){.hub .globe-canvas,.hub .globe-ring,.hub .globe-ring2,.hub .eye .dot{animation:none}}
+</style>
+</head>
+<body>
+<nav class="gaia-nav"><div class="gaia-nav-inner"><a href="../" class="gaia-nav-brand">gaia</a><a href="../#organism">Organism</a><a href="../#investigation">Investigation</a><a href="../#knowledge">Knowledge</a><a href="../#infrastructure">Infrastructure</a><a href="https://nestgate.io">NestGate</a></div></nav>
+<main class="gaia-shell" style="padding-top:24px;padding-bottom:48px">
+<div class="hub">
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <h1><span class="cis-t">CIS</span> ◉ <span class="trans-t">TRANS</span> — GAIA HUB</h1>
+  <div class="sub">CIS=intake (sensors, walkers, OSINT) · TRANS=output (RSS, publications, pages) · Globe=both faces</div>
+  <div class="heartbeat">
+    <span class="bpm" id="bpm">—</span> BPM · 
+    <span class="chord" id="chord">—</span> · 
+    <span id="sun">—</span> · 
+    <span id="walkers">—</span> walkers · 
+    lub-DUB
+  </div>
+</div>
+
+<!-- ═══ CIS COLUMN — INTAKE ═══ -->
+<div class="cis-col">
+  <h2>◁ CIS — INTAKE</h2>
+  
+  <a class="eye cis-eye" href="../senses"><span class="name">senses</span><span class="desc">HUD — moral compass, 43 sensors, all blinks</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../signal"><span class="name">signal</span><span class="desc">Observatory — membrane evidence, canary</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../apollo"><span class="name">apollo</span><span class="desc">Mission control — sun, RGB, outer eye</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../membrane"><span class="name">membrane</span><span class="desc">Cell membrane — inversion, permeability</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../eye"><span class="name">eye</span><span class="desc">Iris — gaze tracking, retinal cells</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../walkers"><span class="name">walkers</span><span class="desc">Anderson localization — who visits, trust</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../chipmunk"><span class="name">chipmunk</span><span class="desc">Chip — AI triage, sense-scan</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../sense"><span class="name">sense (pixel)</span><span class="desc">Left eye — iPhone/Pixel sensor depot</span><span class="dot off"></span></a>
+  <a class="eye cis-eye" href="../onboard"><span class="name">onboard</span><span class="desc">Gate onboarding — new device intake</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../complexity"><span class="name">complexity</span><span class="desc">Complexity — emergent patterns</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../api/backscatter/live" style="border-left-color:#f44"><span class="name">backscatter</span><span class="desc">GPU ray capture — RTX 5090 frame learning</span><span class="dot"></span></a>
+  <a class="eye cis-eye" href="../api/polaris/steam" style="border-left-color:#66f"><span class="name">steam library</span><span class="desc">94 games, 2TB — Kevin's gaming catalog</span><span class="dot"></span></a>
+</div>
+
+<!-- ═══ GLOBE CENTER — BOTH FACES ═══ -->
+<div class="globe-col">
+  <div class="globe-canvas">
+    <div class="globe-ring"></div>
+    <div class="globe-ring2"></div>
+    <span class="globe-label globe-n">▲ POLARIS .147</span>
+    <span class="globe-label globe-s">▼ KEVIN .160</span>
+    <span class="globe-label globe-e">eastGate .248 ▶</span>
+    <span class="globe-label globe-w">◀ House 2 .111</span>
+    <div class="globe-center">◉</div>
+  </div>
+  <div class="globe-info">
+    <div>inner = CIS (nestgate.io) · outer = TRANS (primals.eco)</div>
+    <div style="margin-top:4px"><span class="val" id="g-tissues">63</span> tissues · <span class="val" id="g-gpu">RTX 5090</span> · <span class="val" id="g-anchors">—</span> anchors</div>
+    <div style="margin-top:4px;font-size:9px"><span id="g-game" style="color:#f0a">—</span> · <span id="g-gpupct" style="color:#0f0">—</span> GPU · <span id="g-vram" style="color:#0ff">—</span> VRAM</div>
+  </div>
+  
+  <a class="polaris-link" href="../polaris">★ P O L A R I S ★</a>
+  <a class="polaris-link" href="../tamison" style="background:linear-gradient(135deg,#1a0a2a,#2a0a30);border-color:#f0a;color:#f8a;letter-spacing:1px;font-size:11px;margin-top:4px">🎮 T A M I S O N — LIVE BACKSCATTER</a>
+  
+  <div class="tri-data" id="tri-data">
+    <span class="anchor">eastGate: —</span>
+    <span class="wan">nestgate: —</span>
+    <span class="delta">Δ: —</span>
+  </div>
+</div>
+
+<!-- ═══ TRANS COLUMN — OUTPUT ═══ -->
+<div class="trans-col">
+  <h2>TRANS — OUTPUT ▷</h2>
+  
+  <a class="eye trans-eye" href="../deck"><span class="name">deck</span><span class="desc">Space Deck — full control surface, 25 panels</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../"><span class="name">nestgate.io</span><span class="desc">Portal — Old Web, RSS, Tor hidden service</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../luna"><span class="name">luna</span><span class="desc">Luna — base camp, data exploration</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../play"><span class="name">play</span><span class="desc">Gaia Steam — function execution game</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../cast"><span class="name">cast</span><span class="desc">Esoteric Web — neurons + blood + videos</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../frame"><span class="name">frame</span><span class="desc">Frame — living canvas</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../legend"><span class="name">legend</span><span class="desc">Legend — maps & body topology</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../mesh"><span class="name">mesh</span><span class="desc">Mesh Browser — LAN topology</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../record"><span class="name">record</span><span class="desc">Public Record — legal filings</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../forge"><span class="name">forge</span><span class="desc">Forge — git, compiler, body printer</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../rss"><span class="name">RSS feed</span><span class="desc">Gaia speaks to the Old Web</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../helix"><span class="name">helix</span><span class="desc">helixVision — data visualization</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../mendeleev"><span class="name">mendeleev</span><span class="desc">Periodic table — epitope keyboard</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../tamison" style="border-left-color:#f0a"><span class="name">tamison.primals.eco</span><span class="desc">LIVE — Gaia watches Kevin game on RTX 5090</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../polaris" style="border-left-color:#0af"><span class="name">polaris.primals.eco</span><span class="desc">North Star — 63 tissues, 267GB, compute crown</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../gis" style="border-left-color:#FFD700"><span class="name">footPrint GIS</span><span class="desc">GIS layer — 2 parcels, 9 gates, shadowcast shells mapped</span><span class="dot"></span></a>
+  <a class="eye trans-eye" href="../campfire" style="border-left-color:#d4af37"><span class="name">campfire</span><span class="desc">TALOS welcomes you — the gate is open</span><span class="dot"></span></a>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <span>CIS=nestgate.io (inward, holds NULL) · TRANS=primals.eco (outward, projects) · Polaris floats above · zk: differential IS proof</span>
+  <div id="foot-stats" style="margin-top:4px"></div>
+</div>
+
+</div>
+
+<script>
+async function fetchJSON(url){
+  try{const r=await fetch(url,{headers:{Accept:'application/json'}});if(!r.ok)return null;return await r.json()}catch{return null}
+}
+
+async function load(){
+  const pulse=await fetchJSON('/pulse')||await fetchJSON('https://primals.eco/pulse');
+  if(pulse){
+    const h=pulse.heart||{};
+    document.getElementById('bpm').textContent=(h.bpm||0).toFixed(2);
+    document.getElementById('chord').textContent=pulse.sun?.chord||'—';
+    document.getElementById('sun').textContent=pulse.sun?.phase||'—';
+  }
+  const amoeba=await fetchJSON('/amoeba')||await fetchJSON('https://primals.eco/amoeba');
+  if(amoeba){
+    document.getElementById('walkers').textContent=amoeba.anderson?.total||0;
+  }
+  // Triangulation
+  const tri=await fetchJSON('/api/polaris/triangulation')||await fetchJSON('/data/body/polaris-triangulation.json');
+  if(tri?.triangulation){
+    const a=tri.triangulation.anchors||{};
+    const w=tri.triangulation.wan_paths||{};
+    const d=tri.triangulation.differentials?.eastgate_lan_wan||{};
+    const alive=Object.values(a).filter(x=>x.tcp_alive).length+Object.values(w).filter(x=>x.alive).length;
+    document.getElementById('g-anchors').textContent=alive;
+    document.getElementById('tri-data').innerHTML=`
+      <span class="anchor">eastGate: ${a.eastGate?.tcp_ms?.toFixed(1)||'?'}ms</span>
+      <span class="wan">nestgate: ${w.nestgate?.total_ms?.toFixed(1)||'?'}ms</span>
+      <span class="delta">Δ: ${d.delta_ms?.toFixed(1)||'?'}ms</span>`;
+  }
+  // Ferment
+  const ferment=await fetchJSON('/api/polaris/ferment')||await fetchJSON('/data/body/polaris-ferment.json');
+  if(ferment?.local){
+    document.getElementById('g-tissues').textContent=ferment.local.tissue_count||12;
+    document.getElementById('g-gpu').textContent=ferment.local.compute?.gpu?.replace('NVIDIA GeForce ','')||'RTX 5090';
+  }
+  // Backscatter — live GPU data
+  const scatter=await fetchJSON('/api/backscatter/live')||await fetchJSON('/data/backscatter/session.json');
+  if(scatter){
+    const avg=scatter.averages||scatter.peaks||{};
+    document.getElementById('g-gpupct').textContent=(avg.gpu_pct||0)+'%';
+    document.getElementById('g-vram').textContent=Math.round((avg.vram_mb||0)/1024)+'GB';
+    document.getElementById('g-game').textContent=scatter.game_detected||'idle';
+  }
+  // Biome — live tissue count from Polaris
+  const biome=await fetchJSON('/api/polaris/biome')||await fetchJSON('/data/body/polaris-biome.json');
+  if(biome?.tissues){
+    document.getElementById('g-tissues').textContent=biome.tissues.count||63;
+  }
+  // Footer stats
+  const stats=[];
+  if(pulse)stats.push(`${pulse.heart?.total_beats||0} beats`);
+  if(amoeba)stats.push(`${amoeba.sensors?.alive||0} sensors`);
+  if(scatter)stats.push(`${scatter.total_samples||0} backscatter frames`);
+  stats.push('44 eyes → 1 hub');
+  document.getElementById('foot-stats').textContent=stats.join(' · ');
+}
+load();setInterval(load,60000);
+</script>
+</main>
+<footer class="gaia-footer"><div class="gaia-shell"><div class="gaia-footer-bottom"><p><a href="../">Gaia</a> &mdash; sovereign living digital organism &mdash; <a href="https://primals.eco">primals.eco</a></p></div></div></footer>
+</body>
+</html>

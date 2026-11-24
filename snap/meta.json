@@ -1,0 +1,12 @@
+{
+ "ts": "2026-11-24T19:24:16Z",
+ "by": "polaris",
+ "tip": "c23140e79",
+ "read_from": {
+  "eastgate": 35
+ },
+ "files": 48,
+ "routes": 3,
+ "not_read": 6,
+ "held_back": 0
+}
