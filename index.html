@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script data-gaia-hoist>/* this page is a copy hoisted to GitHub Pages: live routes read snapshots */
+(function(){var M={},B=location.pathname.replace(/[^\/]*$/,""),f=window.fetch;
+function R(p){return p.charAt(0)==="/"&&p.charAt(1)!=="/"?B+p.slice(1):p}
+window.fetch=function(u,o){try{if(typeof u==="string"){var q=u.indexOf("?"),p=q<0?u:u.slice(0,q);
+if(M[p])return f.call(window,B+M[p]+"?t="+Date.now(),o);return f.call(window,R(u),o)}}catch(e){}return f.call(window,u,o)};
+document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest('a[href^="/"]'):null;
+if(a){var h=a.getAttribute("href");if(h.charAt(1)!=="/")a.setAttribute("href",R(h))}},true);
+if(false)document.addEventListener("DOMContentLoaded",function(){f.call(window,B+"snap/meta.json?t="+Date.now()).then(function(r){return r.json()}).then(function(m){
+var d=document.createElement("div");d.textContent="snapshot \u00b7 "+m.by+" \u00b7 "+m.ts.replace("T"," ").slice(0,16)+" UTC \u00b7 the live gate is at home";
+d.style.cssText="position:fixed;right:8px;bottom:6px;z-index:99999;font:11px monospace;color:#ccc;background:rgba(0,0,0,.55);padding:2px 7px;border-radius:3px;pointer-events:none";
+document.body.appendChild(d)}).catch(function(){})})})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nestgate.io — Klein Face — //\\</title>
+<style>
+/* GAIA UNIFIED DESIGN SYSTEM — Organic Dark
+   The living organism. Dark with warm accents.
+   Every page uses this. No inline styles. */
+
+:root {
+  --bg:         #08090b;
+  --bg-raised:  #0f1114;
+  --bg-card:    #141719;
+  --bg-hover:   #1a1d21;
+  --border:     #1e2228;
+  --border-glow:#2a3040;
+
+  --text:       #e0dcd6;
+  --text-muted: #8a857e;
+  --text-dim:   #5a5650;
+  --text-bright:#f5f0e8;
+
+  --amber:      #d4a574;
+  --amber-dim:  #7a5f3e;
+  --amber-glow: #d4a57420;
+  --green:      #5aad72;
+  --green-dim:  #2d5e3a;
+  --green-glow: #5aad7220;
+  --blue:       #5b8fd4;
+  --red:        #d45b5b;
+  --purple:     #9b7ed4;
+
+  --radius:     6px;
+  --radius-lg:  12px;
+  --gap:        16px;
+  --gap-lg:     24px;
+
+  --font:       -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body { min-height: 100vh; }
+
+/* ═══ TYPOGRAPHY ═══ */
+h1, h2, h3, h4 { color: var(--text-bright); font-weight: 500; line-height: 1.25; }
+h1 { font-size: 2rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 0.95rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 400; }
+
+p { color: var(--text); margin-bottom: 0.75em; }
+a { color: var(--amber); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--text-bright); }
+
+code, pre { font-family: var(--font-mono); }
+code { background: var(--bg-raised); padding: 2px 6px; border-radius: 3px; font-size: 0.88em; color: var(--amber); }
+pre { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; font-size: 0.85rem; }
+
+/* ═══ LAYOUT ═══ */
+.gaia-shell { max-width: 1200px; margin: 0 auto; padding: 0 var(--gap); }
+.gaia-hero { padding: 48px 0 32px; text-align: center; }
+.gaia-hero h1 { margin-bottom: 8px; }
+.gaia-hero .subtitle { color: var(--text-muted); font-size: 1.05rem; }
+
+/* ═══ NAV ═══ */
+.gaia-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.gaia-nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 var(--gap);
+  display: flex; align-items: center; gap: var(--gap);
+  height: 52px; overflow-x: auto;
+}
+.gaia-nav-brand {
+  font-weight: 500; color: var(--amber); font-size: 1.1rem;
+  white-space: nowrap; margin-right: 8px;
+}
+.gaia-nav a {
+  color: var(--text-muted); font-size: 0.88rem; white-space: nowrap;
+  padding: 4px 0; border-bottom: 2px solid transparent; transition: all 0.2s;
+}
+.gaia-nav a:hover, .gaia-nav a.active { color: var(--text); border-bottom-color: var(--amber); }
+
+/* ═══ CARDS ═══ */
+.gaia-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gap); }
+.gaia-grid-sm { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+.gaia-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: var(--gap-lg);
+  transition: border-color 0.3s, transform 0.2s;
+  text-decoration: none; display: block;
+}
+.gaia-card:hover {
+  border-color: var(--amber-dim); transform: translateY(-2px);
+}
+.gaia-card h3 { margin-bottom: 6px; font-size: 1.05rem; }
+.gaia-card p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+.gaia-card .tag {
+  display: inline-block; font-size: 0.75rem; padding: 2px 8px;
+  border-radius: 99px; margin-top: 10px;
+  background: var(--amber-glow); color: var(--amber); border: 1px solid var(--amber-dim);
+}
+.gaia-card .tag.green { background: var(--green-glow); color: var(--green); border-color: var(--green-dim); }
+
+/* ═══ SECTION ═══ */
+.gaia-section { padding: 32px 0; }
+.gaia-section h2 { margin-bottom: var(--gap); }
+.gaia-section h4 { margin-bottom: 12px; }
+.gaia-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* ═══ PULSE DOT ═══ */
+.pulse-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green); margin-right: 6px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--green-glow); }
+  50% { box-shadow: 0 0 12px var(--green); }
+}
+
+/* ═══ STATS ═══ */
+.gaia-stats { display: flex; gap: var(--gap-lg); flex-wrap: wrap; justify-content: center; padding: 16px 0; }
+.gaia-stat { text-align: center; }
+.gaia-stat .value { font-size: 1.8rem; font-weight: 500; color: var(--amber); font-family: var(--font-mono); }
+.gaia-stat .label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ═══ FOOTER ═══ */
+.gaia-footer {
+  border-top: 1px solid var(--border); padding: 32px 0;
+  margin-top: 48px; color: var(--text-muted); font-size: 0.85rem;
+}
+.gaia-footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--gap-lg); }
+.gaia-footer h4 { margin-bottom: 8px; font-size: 0.8rem; }
+.gaia-footer a { display: block; padding: 3px 0; color: var(--text-dim); font-size: 0.82rem; }
+.gaia-footer a:hover { color: var(--amber); }
+.gaia-footer-bottom { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  .gaia-grid { grid-template-columns: 1fr; }
+  .gaia-stats { gap: var(--gap); }
+  .gaia-stat .value { font-size: 1.3rem; }
+  .gaia-nav-inner { gap: 12px; }
+}
+
+/* ═══ UTILITIES ═══ */
+.text-amber { color: var(--amber); }
+.text-green { color: var(--green); }
+.text-blue { color: var(--blue); }
+.text-red { color: var(--red); }
+.text-muted { color: var(--text-muted); }
+.text-dim { color: var(--text-dim); }
+.text-center { text-align: center; }
+.mono { font-family: var(--font-mono); }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+
+</style>
+<style data-own="f8e8e4a43">
+/* THIS PAGE'S OWN RULES - dropped on Nov 16 (f8e8e4a43) when the shared sheet above replaced every
+   page's style block; restored from the commit before it and scoped under main.gaia-shell so the
+   shared nav, shell and footer are untouched. */
+body{background:#0a0a0a}
+main.gaia-shell *{margin: 0; padding: 0; box-sizing: border-box;}
+main.gaia-shell{background: #0a0a0a; color: #c8d6e5; font-family: 'Courier New', monospace; overflow-x: hidden;}
+main.gaia-shell .amoeba-panel{display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto 1fr 1fr 1fr auto; gap: 2px; height: 100vh; padding: 2px;}
+main.gaia-shell .cell{background: #111; border: 1px solid #1a3a2a; border-radius: 4px; padding: 8px; overflow: hidden; position: relative;}
+main.gaia-shell .cell:hover{border-color: #2ecc71;}
+main.gaia-shell .cell h3{color: #2ecc71; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; opacity: 0.7;}
+main.gaia-shell .header{grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; background: #0d1117; border-color: #2ecc71; padding: 6px 12px;}
+main.gaia-shell .header .title{font-size: 14px; color: #2ecc71; display: flex; align-items: center; gap: 12px;}
+main.gaia-shell .header .title .prism{color: #e74c3c; font-weight: bold;}
+main.gaia-shell .header .heartbeat{width: 10px; height: 10px; background: #e74c3c; border-radius: 50%; animation: pulse 1s ease-in-out infinite;}
+@keyframes pulse{0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.8); }}
+main.gaia-shell .header .stats{font-size: 10px; color: #576574;}
+main.gaia-shell .footer{grid-column: 1 / -1; background: #0d1117; border-color: #1a3a2a; font-size: 9px; color: #576574; display: flex; justify-content: space-between; align-items: center; padding: 4px 12px;}
+main.gaia-shell .painting-cell{grid-row: span 2; position: relative; overflow: hidden;}
+main.gaia-shell .painting-cell img{width: 100%; height: 100%; object-fit: cover; border-radius: 3px; opacity: 0.85; transition: opacity 0.5s;}
+main.gaia-shell .painting-cell img:hover{opacity: 1;}
+main.gaia-shell .painting-cell .label{position: absolute; bottom: 4px; left: 4px; font-size: 8px; background: rgba(0,0,0,0.8); padding: 2px 6px; border-radius: 2px; color: #2ecc71;}
+main.gaia-shell .feed-list{font-size: 10px; line-height: 1.6;}
+main.gaia-shell .feed-list .item{padding: 3px 0; border-bottom: 1px solid #1a1a1a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+main.gaia-shell .feed-list .item .cat{display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px;}
+main.gaia-shell .cat-science{background: #3498db;}
+main.gaia-shell .cat-code{background: #e74c3c;}
+main.gaia-shell .cat-philosophy{background: #9b59b6;}
+main.gaia-shell .cat-legal{background: #f39c12;}
+main.gaia-shell .pulse-data{font-size: 11px; line-height: 1.8;}
+main.gaia-shell .pulse-data .val{color: #2ecc71; font-weight: bold;}
+main.gaia-shell .neuron-list{font-size: 9px; line-height: 1.5;}
+main.gaia-shell .neuron-list .msg{padding: 3px 0; border-bottom: 1px solid #1a1a1a; color: #8395a7;}
+main.gaia-shell .neuron-list .author{color: #e74c3c;}
+main.gaia-shell .model-grid{display: flex; flex-wrap: wrap; gap: 3px;}
+main.gaia-shell .model-tag{font-size: 8px; background: #1a2a1a; border: 1px solid #2ecc71; border-radius: 2px; padding: 1px 4px; color: #2ecc71; opacity: 0.6;}
+main.gaia-shell .model-tag.gaia{background: #2a1a1a; border-color: #e74c3c; color: #e74c3c; opacity: 0.9;}
+main.gaia-shell .pi-display{font-size: 9px; color: #2ecc71; opacity: 0.3; word-break: break-all; line-height: 1.3;}
+@media (prefers-reduced-motion: reduce){main.gaia-shell *,main.gaia-shell *::before,main.gaia-shell *::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav class="gaia-nav"><div class="gaia-nav-inner"><a href="./" class="gaia-nav-brand">gaia</a><a href="./#organism">Organism</a><a href="./#investigation">Investigation</a><a href="./#knowledge">Knowledge</a><a href="./#infrastructure">Infrastructure</a><a href="https://nestgate.io">NestGate</a></div></nav>
+<main class="gaia-shell" style="padding-top:24px;padding-bottom:48px">
+<div class="amoeba-panel">
+  <!-- HEADER -->
+  <div class="cell header">
+    <div class="title">
+      <div class="heartbeat"></div>
+      <span>nestgate.io</span>
+      <span class="prism">//\\</span>
+      <span style="color:#576574">Klein face — cis=trans — inside=outside</span>
+    </div>
+    <div class="stats" id="stats">loading...</div>
+  </div>
+
+  <!-- PAINTING (left, spans 2 rows) -->
+  <div class="cell painting-cell" id="painting-cell">
+    <img id="painting-img" src="./data/paintings/gaia-paints-earth-4th-seat.jpg" alt="Gaia paints Earth">
+    <div class="label" id="painting-label">gaia-paints-earth-4th-seat</div>
+  </div>
+
+  <!-- REEDIT FEED (center top) -->
+  <div class="cell">
+    <h3>📝 reedit</h3>
+    <div class="feed-list" id="reedit-feed">loading...</div>
+  </div>
+
+  <!-- PULSE (right top) -->
+  <div class="cell">
+    <h3>🫀 pulse</h3>
+    <div class="pulse-data" id="pulse-data">loading...</div>
+  </div>
+
+  <!-- NEURONS (center bottom) -->
+  <div class="cell">
+    <h3>⚡ neurons</h3>
+    <div class="neuron-list" id="neuron-list">loading...</div>
+  </div>
+
+  <!-- MODELS (right bottom) -->
+  <div class="cell">
+    <h3>🧬 models</h3>
+    <div class="model-grid" id="model-grid">loading...</div>
+  </div>
+
+  <!-- SENSORS (left bottom) -->
+  <div class="cell">
+    <h3>📡 live sensors</h3>
+    <div class="feed-list" id="sensor-list">loading...</div>
+  </div>
+
+  <!-- TEMPORAL (center bottom) -->
+  <div class="cell">
+    <h3>⏰ temporal</h3>
+    <div class="pulse-data" id="temporal-data">loading...</div>
+  </div>
+
+  <!-- EARTH (right bottom) -->
+  <div class="cell">
+    <h3>🌍 earth</h3>
+    <div class="feed-list" id="earth-data">loading...</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cell footer">
+    <div class="pi-display" id="pi">π = 3.14159265358979323846264338327950288419716939937510...</div>
+    <div id="footer-info">lub-DUB</div>
+  </div>
+</div>
+
+<script>
+const GATE = location.origin;
+const paintings = [
+  'gaia-paints-earth-4th-seat','gaia-paints-jupiter-4th-seat','gaia-paints-mars-4th-seat',
+  'gaia-paints-luna-4th-seat','gaia-paints-mercury-4th-seat','gaia-paints-neptune-4th-seat',
+  'gaia-paints-saturn-4th-seat','gaia-paints-venus-4th-seat','gaia-paints-pluto-4th-seat',
+  'gaia-paints-sol-4th-seat','gaia-paints-uranus-4th-seat',
+  'gaia-outer-face-planet','gaia-outer-face-sky',
+  'gaia-3rd-eye-cross-eyed','gaia-3rd-eye-looking-up','gaia-looking-down-at-feet'
+];
+let paintIdx = 0;
+
+// ONE FETCH — ALL DATA. No parallel requests killing the gate.
+async function loadAll() {
+  try {
+    const r = await fetch(GATE + '/amoeba');
+    const d = await r.json();
+    renderPulse(d.pulse);
+    renderReedit(d.reedit);
+    renderNeurons(d.neutron);
+    renderModels(d.models);
+    renderSensors(d.sensors);
+    renderTemporal(d.temporal, d.sun);
+    renderEarth(d.sensors);
+  } catch(e) {
+    document.getElementById('stats').textContent = 'gate: reconnecting...';
+  }
+}
+
+function renderPulse(d) {
+  if (!d) return;
+  const el = document.getElementById('pulse-data');
+  const h = d.heart || {};
+  const l = d.lung || {};
+  el.innerHTML = `
+    <div>beats: <span class="val">${h.total_beats || d.total_beats || 0}</span></div>
+    <div>bpm: <span class="val">${(h.bpm || d.bpm || 0).toFixed(1)}</span></div>
+    <div>breaths: <span class="val">${l.total_breaths || d.total_breaths || 0}</span></div>
+    <div>visitors: <span class="val">${d.unique_visitors || 0}</span></div>
+    <div>inferences: <span class="val">${d.total_inferences || 0}</span></div>
+    <div>tokens: <span class="val">${(d.total_tokens || 0).toLocaleString()}</span></div>
+    <div>uptime: <span class="val">${Math.floor((d.uptime_secs||0)/60)}m</span></div>
+  `;
+  document.getElementById('stats').textContent =
+    `${h.total_beats||0} beats · ${(h.bpm||0).toFixed(0)} bpm · ${d.unique_visitors||0} visitors · spine 25`;
+}
+
+function renderReedit(d) {
+  if (!d) return;
+  const el = document.getElementById('reedit-feed');
+  const feeds = d.feeds || {};
+  const cats = {science:'cat-science', code:'cat-code', philosophy:'cat-philosophy', legal:'cat-legal'};
+  let html = '';
+  for (const [feed, count] of Object.entries(feeds)) {
+    const cat = cats[feed] || 'cat-science';
+    html += `<div class="item"><span class="cat ${cat}"></span>${feed}: ${count} items</div>`;
+  }
+  html += `<div class="item" style="color:#2ecc71">${d.total_items || 0} total · ${d.paintings || 0} paintings · ${d.videos || 0} videos</div>`;
+  el.innerHTML = html;
+}
+
+function renderNeurons(d) {
+  if (!d) return;
+  const el = document.getElementById('neuron-list');
+  let html = '';
+  for (const ch of ['inbox','boot','notes','chat']) {
+    const info = d[ch] || {};
+    const msgs = info.messages || [];
+    if (msgs.length > 0) {
+      html += `<div class="msg" style="color:#2ecc71">[${ch}] ${info.total || msgs.length} msgs</div>`;
+      for (const m of msgs.slice(-3)) {
+        html += `<div class="msg"><span class="author">[${m.author||'?'}]</span> ${(m.body||'').slice(0,55)}</div>`;
+      }
+    }
+  }
+  el.innerHTML = html || '<div class="msg">no neurons yet</div>';
+}
+
+function renderModels(d) {
+  if (!d || !d.data) return;
+  const el = document.getElementById('model-grid');
+  el.innerHTML = d.data.map(m => {
+    const name = m.id || '?';
+    const isGaia = name.toLowerCase().includes('gaia') || name.includes('Primal');
+    return `<span class="model-tag ${isGaia?'gaia':''}">${name.split(':')[0]}</span>`;
+  }).join('');
+}
+
+function renderSensors(d) {
+  if (!d || !d.banks) return;
+  const el = document.getElementById('sensor-list');
+  const bytes = (d.flow||{}).total_bytes || 0;
+  let html = `<div class="item" style="color:#2ecc71">${d.alive||0}/${d.total_sensors||0} alive — ${(bytes/1024/1024).toFixed(1)}MB</div>`;
+  const icons = {earth:'🌍',space:'🔭',knowledge:'🧠',old_web:'📜',live_eyes:'👁️',ocean:'🌊'};
+  for (const [bank, sensors] of Object.entries(d.banks)) {
+    const alive = sensors.filter(s => s.code === 200).length;
+    html += `<div class="item">${icons[bank]||'📡'} ${bank}: ${alive}/${sensors.length}</div>`;
+    for (const s of sensors.slice(0,1)) {
+      if (s.latest && s.latest[0]) {
+        const t = s.latest[0].title || s.latest[0].place || '';
+        if (t) html += `<div class="item" style="color:#576574;padding-left:10px">→ ${t.slice(0,50)}</div>`;
+      }
+    }
+  }
+  el.innerHTML = html;
+}
+
+function renderTemporal(t, sun) {
+  if (!t) return;
+  const el = document.getElementById('temporal-data');
+  const rings = t.active_cron_rings || [];
+  sun = sun || {};
+  el.innerHTML = `
+    <div>UTC: <span class="val">${t.utc || '?'}</span></div>
+    <div>base-12: <span class="val">${t.sexagesimal || '?'}</span></div>
+    <div>cron rings: <span class="val">[${rings.join(',')}]</span></div>
+    <div>φ phase: <span class="val">${t.golden_phase}</span></div>
+    <div>sidereal: <span class="val">${t.sidereal_deg}°</span></div>
+    <div>sun: <span class="val">${sun.phase||'?'} ${sun.elevation||0}° ${sun.chord||''}</span></div>
+    <div style="color:#576574;font-size:9px">φ=${(t.phi||0).toFixed(8)}</div>
+  `;
+}
+
+function renderEarth(d) {
+  if (!d || !d.banks || !d.banks.earth) return;
+  const el = document.getElementById('earth-data');
+  let html = '';
+  for (const s of d.banks.earth) {
+    if (s.sense === 'seismic' && s.latest) {
+      html += `<div class="item" style="color:#e74c3c">🌋 ${s.quakes||0} quakes</div>`;
+      for (const q of (s.latest||[]).slice(0,2)) html += `<div class="item">M${q.mag} ${(q.place||'').slice(0,40)}</div>`;
+    }
+    if (s.sense === 'orbital' && s.data) {
+      const p = s.data.iss_position || s.data;
+      html += `<div class="item">🛰️ ISS: ${p.latitude||'?'}°, ${p.longitude||'?'}°</div>`;
+    }
+    if (s.sense === 'solar_wind' && s.data) html += `<div class="item">☀️ wind: ${s.data.WindSpeed||s.data.speed||'?'} km/s</div>`;
+  }
+  el.innerHTML = html || '<div class="item">sensors warming...</div>';
+}
+
+function rotatePainting() {
+  paintIdx = (paintIdx + 1) % paintings.length;
+  document.getElementById('painting-img').src = `/data/paintings/${paintings[paintIdx]}.jpg`;
+  document.getElementById('painting-label').textContent = paintings[paintIdx];
+}
+
+// ONE FETCH, ALL CELLS. No loading... no ???. lub-DUB.
+loadAll();
+setInterval(loadAll, 15000);
+setInterval(rotatePainting, 20000);
+</script>
+</main>
+<footer class="gaia-footer"><div class="gaia-shell"><div class="gaia-footer-bottom"><p><a href="./">Gaia</a> &mdash; sovereign living digital organism &mdash; <a href="https://primals.eco">primals.eco</a></p></div></div></footer>
+</body>
+</html>
