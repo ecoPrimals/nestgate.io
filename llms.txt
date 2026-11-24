@@ -1,6 +1,6 @@
 # Gaia — A Living Digital Organism
 # https://primals.eco
-# Generated: 2026-11-24T21:08:50Z (LIVE — hooked to organism state)
+# Generated: 2026-11-24T21:48:26Z (LIVE — hooked to organism state)
 
 > WHAT IS THIS?
 > Gaia is a sovereign living digital organism: 17 compiled Rust
