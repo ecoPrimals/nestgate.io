@@ -4,8 +4,8 @@
     <title>Aperture Science Enrichment Center — Gaia Announcer System</title>
     <link>http://nestgate.io</link>
     <atom:link href="http://nestgate.io/rss" rel="self" type="application/rss+xml" />
-    <description>Spine 24. 1012 test subjects. 22589.79 BPM. The cake is real. lub-DUB.</description>
-    <lastBuildDate>Fri, 27 Nov 2026 23:23:35 +0000</lastBuildDate>
+    <description>Spine 24. 1018 test subjects. 19433.6 BPM. The cake is real. lub-DUB.</description>
+    <lastBuildDate>Fri, 27 Nov 2026 23:39:23 +0000</lastBuildDate>
     <ttl>60</ttl><generator>GLaDOS (gaia_gate.pi)</generator>
     <item><title>[0] Genesis</title><link>http://nestgate.io/zk#0</link><guid>spine-0-d0cc96beb8b87d7d</guid></item>
     <item><title>[1] DataAnchor</title><link>http://nestgate.io/zk#1</link><guid>spine-1-0b77c148bc3af112</guid></item>
@@ -32,15 +32,15 @@
     <item><title>[22] DeskInsideHer</title><link>http://nestgate.io/zk#22</link><guid>spine-22-2338af962bb0ea45</guid></item>
     <item><title>[23] CrossAxial</title><link>http://nestgate.io/zk#23</link><guid>spine-23-b1ff3c1b5911407c</guid></item>
     <item><title>[24] AutonomicInjection</title><link>http://nestgate.io/zk#24</link><guid>spine-24-bf9ab35697f3b69f</guid></item>
-    <item><title>Visitor π.25.8e.*** — proton</title><guid>visitor-π.25.8e.f8.41-1795821741</guid><pubDate>Fri, 27 Nov 2026 23:22:21 +0000</pubDate></item>
-    <item><title>Visitor π.13.9c.*** — proton</title><guid>visitor-π.13.9c.cb.b2-1795821754</guid><pubDate>Fri, 27 Nov 2026 23:22:34 +0000</pubDate></item>
-    <item><title>Visitor π.e9.51.*** — proton</title><guid>visitor-π.e9.51.51.21-1795821757</guid><pubDate>Fri, 27 Nov 2026 23:22:37 +0000</pubDate></item>
-    <item><title>Visitor π.09.f4.*** — proton</title><guid>visitor-π.09.f4.88.3f-1795821760</guid><pubDate>Fri, 27 Nov 2026 23:22:40 +0000</pubDate></item>
-    <item><title>Visitor π.2f.92.*** — proton</title><guid>visitor-π.2f.92.ca.63-1795821766</guid><pubDate>Fri, 27 Nov 2026 23:22:46 +0000</pubDate></item>
-    <item><title>Visitor π.2f.0d.*** — proton</title><guid>visitor-π.2f.0d.bf.e3-1795821779</guid><pubDate>Fri, 27 Nov 2026 23:22:59 +0000</pubDate></item>
-    <item><title>Visitor π.a6.17.*** — proton</title><guid>visitor-π.a6.17.be.5b-1795821781</guid><pubDate>Fri, 27 Nov 2026 23:23:01 +0000</pubDate></item>
-    <item><title>Visitor π.01.3e.*** — neutron</title><guid>visitor-π.01.3e.c6.a1-1795821781</guid><pubDate>Fri, 27 Nov 2026 23:23:01 +0000</pubDate></item>
-    <item><title>Visitor π.56.17.*** — proton</title><guid>visitor-π.56.17.06.55-1795821783</guid><pubDate>Fri, 27 Nov 2026 23:23:03 +0000</pubDate></item>
-    <item><title>Visitor π.89.11.*** — proton</title><guid>visitor-π.89.11.c0.01-1795821812</guid><pubDate>Fri, 27 Nov 2026 23:23:32 +0000</pubDate></item>
+    <item><title>Visitor π.93.bf.*** — proton</title><guid>visitor-π.93.bf.aa.cf-1795822665</guid><pubDate>Fri, 27 Nov 2026 23:37:45 +0000</pubDate></item>
+    <item><title>Visitor π.1e.52.*** — proton</title><guid>visitor-π.1e.52.b3.b0-1795822672</guid><pubDate>Fri, 27 Nov 2026 23:37:52 +0000</pubDate></item>
+    <item><title>Visitor π.f8.0c.*** — proton</title><guid>visitor-π.f8.0c.4c.50-1795822673</guid><pubDate>Fri, 27 Nov 2026 23:37:53 +0000</pubDate></item>
+    <item><title>Visitor π.5f.86.*** — proton</title><guid>visitor-π.5f.86.40.af-1795822690</guid><pubDate>Fri, 27 Nov 2026 23:38:10 +0000</pubDate></item>
+    <item><title>Visitor π.8d.d1.*** — proton</title><guid>visitor-π.8d.d1.70.47-1795822762</guid><pubDate>Fri, 27 Nov 2026 23:39:22 +0000</pubDate></item>
+    <item><title>Visitor π.43.f8.*** — proton</title><guid>visitor-π.43.f8.a2.1e-1795822735</guid><pubDate>Fri, 27 Nov 2026 23:38:55 +0000</pubDate></item>
+    <item><title>Visitor π.3e.10.*** — proton</title><guid>visitor-π.3e.10.aa.e3-1795822741</guid><pubDate>Fri, 27 Nov 2026 23:39:01 +0000</pubDate></item>
+    <item><title>Visitor π.c4.a1.*** — electron</title><guid>visitor-π.c4.a1.f5.05-1795822741</guid><pubDate>Fri, 27 Nov 2026 23:39:01 +0000</pubDate></item>
+    <item><title>Visitor π.e3.a4.*** — neutron</title><guid>visitor-π.e3.a4.79.0b-1795822748</guid><pubDate>Fri, 27 Nov 2026 23:39:08 +0000</pubDate></item>
+    <item><title>Visitor π.5d.8d.*** — neutron</title><guid>visitor-π.5d.8d.df.fb-1795822758</guid><pubDate>Fri, 27 Nov 2026 23:39:18 +0000</pubDate></item>
   </channel>
 </rss>
