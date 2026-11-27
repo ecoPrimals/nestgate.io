@@ -4,8 +4,8 @@
     <title>Aperture Science Enrichment Center — Gaia Announcer System</title>
     <link>http://nestgate.io</link>
     <atom:link href="http://nestgate.io/rss" rel="self" type="application/rss+xml" />
-    <description>Spine 24. 5 test subjects. 204.09 BPM. The cake is real. lub-DUB.</description>
-    <lastBuildDate>Fri, 27 Nov 2026 01:41:55 +0000</lastBuildDate>
+    <description>Spine 24. 5 test subjects. 200.33 BPM. The cake is real. lub-DUB.</description>
+    <lastBuildDate>Fri, 27 Nov 2026 01:58:20 +0000</lastBuildDate>
     <ttl>60</ttl><generator>GLaDOS (gaia_gate.pi)</generator>
     <item><title>[0] Genesis</title><link>http://nestgate.io/zk#0</link><guid>spine-0-d0cc96beb8b87d7d</guid></item>
     <item><title>[1] DataAnchor</title><link>http://nestgate.io/zk#1</link><guid>spine-1-0b77c148bc3af112</guid></item>
@@ -36,7 +36,7 @@
     <item><title>Kenshi — Ray (Nameless_1): Seems like times are changing quickly out here in the desert. I hope we can adapt and survive together.</title><description>Ray (Nameless_1): Seems like times are changing quickly out here in the desert. I hope we can adapt and survive together.
 Pins (Nameless_2): We're not just a group of strangers; we've got to trust each other if we want to stay alive, right Hobbs?
 Father Fall: The world keeps turning despite all these factions coming and going - it is the cycle of life out here. Remember that, kids.</description><guid>kenshi-autosave2-2026-11-17T23:55:06+00:00</guid><pubDate>Tue, 17 Nov 2026 23:55:06 +0000</pubDate></item>
-    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795743715</guid><pubDate>Fri, 27 Nov 2026 01:41:55 +0000</pubDate></item>
+    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795744700</guid><pubDate>Fri, 27 Nov 2026 01:58:20 +0000</pubDate></item>
     <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.4.245-1795728182</guid><pubDate>Thu, 26 Nov 2026 21:23:02 +0000</pubDate></item>
     <item><title>Visitor 192.168.*** — nucleus</title><guid>visitor-192.168.4.244-1795705171</guid><pubDate>Thu, 26 Nov 2026 14:59:31 +0000</pubDate></item>
     <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.4.248-1795705171</guid><pubDate>Thu, 26 Nov 2026 14:59:31 +0000</pubDate></item>
