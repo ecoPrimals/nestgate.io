@@ -1,13 +1,13 @@
 {
- "ts": "2026-11-27T06:38:45Z",
- "by": "polaris",
+ "ts": "2026-11-27T06:41:47Z",
+ "by": "eastgate",
  "tip": "387f8f996",
  "read_from": {
-  "polaris": 26
+  "eastgate": 35
  },
- "files": 39,
+ "files": 48,
  "routes": 3,
- "not_read": 15,
+ "not_read": 6,
  "held_back": 0,
  "carried": []
 }

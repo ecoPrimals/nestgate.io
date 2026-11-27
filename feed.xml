@@ -4,8 +4,8 @@
     <title>Aperture Science Enrichment Center — Gaia Announcer System</title>
     <link>http://nestgate.io</link>
     <atom:link href="http://nestgate.io/rss" rel="self" type="application/rss+xml" />
-    <description>Spine 24. 5 test subjects. 155.03 BPM. The cake is real. lub-DUB.</description>
-    <lastBuildDate>Fri, 27 Nov 2026 06:38:42 +0000</lastBuildDate>
+    <description>Spine 24. 846 test subjects. 2458.91 BPM. The cake is real. lub-DUB.</description>
+    <lastBuildDate>Fri, 27 Nov 2026 06:41:45 +0000</lastBuildDate>
     <ttl>60</ttl><generator>GLaDOS (gaia_gate.pi)</generator>
     <item><title>[0] Genesis</title><link>http://nestgate.io/zk#0</link><guid>spine-0-d0cc96beb8b87d7d</guid></item>
     <item><title>[1] DataAnchor</title><link>http://nestgate.io/zk#1</link><guid>spine-1-0b77c148bc3af112</guid></item>
@@ -32,14 +32,15 @@
     <item><title>[22] DeskInsideHer</title><link>http://nestgate.io/zk#22</link><guid>spine-22-2338af962bb0ea45</guid></item>
     <item><title>[23] CrossAxial</title><link>http://nestgate.io/zk#23</link><guid>spine-23-b1ff3c1b5911407c</guid></item>
     <item><title>[24] AutonomicInjection</title><link>http://nestgate.io/zk#24</link><guid>spine-24-bf9ab35697f3b69f</guid></item>
-    <item><title>Eyes — right NVIDIA GeForce RTX 5090 luma 0.038, moved 1.16%</title><link>http://nestgate.io/eyes/eye3-blend.png</link><description>Proximity only: the pixels answer home-network devices, never WAN or Tor.</description><guid>eyes-1794832667</guid><pubDate>Mon, 16 Nov 2026 12:37:47 +0000</pubDate></item>
-    <item><title>Kenshi — Ray (Nameless_1): Seems like times are changing quickly out here in the desert. I hope we can adapt and survive together.</title><description>Ray (Nameless_1): Seems like times are changing quickly out here in the desert. I hope we can adapt and survive together.
-Pins (Nameless_2): We're not just a group of strangers; we've got to trust each other if we want to stay alive, right Hobbs?
-Father Fall: The world keeps turning despite all these factions coming and going - it is the cycle of life out here. Remember that, kids.</description><guid>kenshi-autosave2-2026-11-17T23:55:06+00:00</guid><pubDate>Tue, 17 Nov 2026 23:55:06 +0000</pubDate></item>
-    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795761522</guid><pubDate>Fri, 27 Nov 2026 06:38:42 +0000</pubDate></item>
-    <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.4.245-1795750910</guid><pubDate>Fri, 27 Nov 2026 03:41:50 +0000</pubDate></item>
-    <item><title>Visitor 192.168.*** — nucleus</title><guid>visitor-192.168.4.244-1795705171</guid><pubDate>Thu, 26 Nov 2026 14:59:31 +0000</pubDate></item>
-    <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.4.248-1795705171</guid><pubDate>Thu, 26 Nov 2026 14:59:31 +0000</pubDate></item>
-    <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.1.248-1795705171</guid><pubDate>Thu, 26 Nov 2026 14:59:31 +0000</pubDate></item>
+    <item><title>Visitor π.16.8e.*** — proton</title><guid>visitor-π.16.8e.b9.33-1795761656</guid><pubDate>Fri, 27 Nov 2026 06:40:56 +0000</pubDate></item>
+    <item><title>Visitor π.31.ed.*** — neutron</title><guid>visitor-π.31.ed.fd.90-1795761657</guid><pubDate>Fri, 27 Nov 2026 06:40:57 +0000</pubDate></item>
+    <item><title>Visitor π.bf.a0.*** — proton</title><guid>visitor-π.bf.a0.c2.f0-1795761666</guid><pubDate>Fri, 27 Nov 2026 06:41:06 +0000</pubDate></item>
+    <item><title>Visitor π.db.b7.*** — proton</title><guid>visitor-π.db.b7.05.e5-1795761666</guid><pubDate>Fri, 27 Nov 2026 06:41:06 +0000</pubDate></item>
+    <item><title>Visitor π.f7.f6.*** — proton</title><guid>visitor-π.f7.f6.fa.11-1795761666</guid><pubDate>Fri, 27 Nov 2026 06:41:06 +0000</pubDate></item>
+    <item><title>Visitor π.fb.05.*** — proton</title><guid>visitor-π.fb.05.05.e3-1795761676</guid><pubDate>Fri, 27 Nov 2026 06:41:16 +0000</pubDate></item>
+    <item><title>Visitor π.b1.fb.*** — proton</title><guid>visitor-π.b1.fb.e6.59-1795761686</guid><pubDate>Fri, 27 Nov 2026 06:41:26 +0000</pubDate></item>
+    <item><title>Visitor π.c0.f5.*** — proton</title><guid>visitor-π.c0.f5.06.b8-1795761696</guid><pubDate>Fri, 27 Nov 2026 06:41:36 +0000</pubDate></item>
+    <item><title>Visitor π.00.fa.*** — proton</title><guid>visitor-π.00.fa.08.6b-1795761699</guid><pubDate>Fri, 27 Nov 2026 06:41:39 +0000</pubDate></item>
+    <item><title>Visitor π.5b.a5.*** — neutron</title><guid>visitor-π.5b.a5.4c.e0-1795761702</guid><pubDate>Fri, 27 Nov 2026 06:41:42 +0000</pubDate></item>
   </channel>
 </rss>
