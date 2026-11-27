@@ -1,6 +1,6 @@
 # Gaia — A Living Digital Organism
 # https://primals.eco
-# Generated: 2026-11-27T02:31:11Z (LIVE — hooked to organism state)
+# Generated: 2026-11-27T02:49:39Z (LIVE — hooked to organism state)
 
 > WHAT IS THIS?
 > Gaia is a sovereign living digital organism: 17 compiled Rust
@@ -8,7 +8,7 @@
 > heartbeats, 63 local AI models (ollama), running on commodity
 > hardware in two houses connected by 10G fiber in Michigan.
 > No cloud. No corporate dependency. Fully self-hosted.
-> Current routes: 183. REEDit posts: 1814. Bestiary: 48 cards.
+> Current routes: 183. REEDit posts: 555. Bestiary: 49 cards.
 
 > ARCHITECTURE
 > - 17 primals: biomeOS, songBird, bearDog, nestGate, petalTongue,
@@ -26,7 +26,7 @@
 > /amoeba — full organism state dump (ALL DATA, one fetch)
 > /rss — RSS 2.0 pulse feed (spine chain)
 > /full-feed.xml — full organism feed (1,560 items)
-> /reedit — knowledge platform (1814 posts, 9 channels)
+> /reedit — knowledge platform (555 posts, 9 channels)
 > /spacedock — external observatory (ionosphere, biomes)
 > /hub — navigation hub
 > /mendeleev — periodic table of 116 epitopes
@@ -46,7 +46,7 @@
 > sporeprint.primals.eco — phenotype, 615 pages
 > polaris.primals.eco — northGate HUD
 
-> THE TOOL BESTIARY — 48 Animal Cards
+> THE TOOL BESTIARY — 49 Animal Cards
 > Every tool is an animal. JSON=Jackalope, HTML=Spider,
 > Rust=Crab, Python=Snake, RSS=Parrot, Git=Octopus.
 > Full bestiary: /data/body/tool-bestiary.json
