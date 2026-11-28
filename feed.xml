@@ -4,8 +4,8 @@
     <title>Aperture Science Enrichment Center — Gaia Announcer System</title>
     <link>http://nestgate.io</link>
     <atom:link href="http://nestgate.io/rss" rel="self" type="application/rss+xml" />
-    <description>Spine 24. 3 test subjects. 160767.25 BPM. The cake is real. lub-DUB.</description>
-    <lastBuildDate>Sat, 28 Nov 2026 15:24:06 +0000</lastBuildDate>
+    <description>Spine 24. 3 test subjects. 80416.79 BPM. The cake is real. lub-DUB.</description>
+    <lastBuildDate>Sat, 28 Nov 2026 15:39:56 +0000</lastBuildDate>
     <ttl>60</ttl><generator>GLaDOS (gaia_gate.pi)</generator>
     <item><title>[0] Genesis</title><link>http://nestgate.io/zk#0</link><guid>spine-0-d0cc96beb8b87d7d</guid></item>
     <item><title>[1] DataAnchor</title><link>http://nestgate.io/zk#1</link><guid>spine-1-0b77c148bc3af112</guid></item>
@@ -33,7 +33,7 @@
     <item><title>[23] CrossAxial</title><link>http://nestgate.io/zk#23</link><guid>spine-23-b1ff3c1b5911407c</guid></item>
     <item><title>[24] AutonomicInjection</title><link>http://nestgate.io/zk#24</link><guid>spine-24-bf9ab35697f3b69f</guid></item>
     <item><title>Visitor 192.168.*** — electron</title><guid>visitor-192.168.1.254-1795878534</guid><pubDate>Sat, 28 Nov 2026 15:08:54 +0000</pubDate></item>
-    <item><title>Visitor 192.168.*** — nucleus</title><guid>visitor-192.168.4.147-1795878631</guid><pubDate>Sat, 28 Nov 2026 15:10:31 +0000</pubDate></item>
-    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795879446</guid><pubDate>Sat, 28 Nov 2026 15:24:06 +0000</pubDate></item>
+    <item><title>Visitor 192.168.*** — nucleus</title><guid>visitor-192.168.4.147-1795879875</guid><pubDate>Sat, 28 Nov 2026 15:31:15 +0000</pubDate></item>
+    <item><title>Visitor 127.0.0.*** — nucleus</title><guid>visitor-127.0.0.1-1795880396</guid><pubDate>Sat, 28 Nov 2026 15:39:56 +0000</pubDate></item>
   </channel>
 </rss>
